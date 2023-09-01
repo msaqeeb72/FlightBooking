@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_flight_graph"
+    app:startDestination="@id/searchFlightHomeFragment">
+
+    <fragment
+        android:id="@+id/searchFlightHomeFragment"
+        tools:layout="@layout/search_flight_home_layout"
+        android:name="com.saqeeb.testing.fragments.SearchFlightHomeFragment"
+        android:label="SearchFlightHomeFragment" />
+</navigation>
