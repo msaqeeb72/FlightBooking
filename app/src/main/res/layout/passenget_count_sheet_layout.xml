@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.saqeeb.testing.viewmodels.FlightSearchViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/adultInputLayout"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/thin_background_outline"
+                android:outlineProvider="none"
+                android:padding="@dimen/_2sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:hint="Adults"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/adultInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="@{viewModel.passengersCount.adult}"
+                    android:editable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/removeAdult"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:cardBackgroundColor="@color/primaryColor"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/adultInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/adultInputLayout"
+                app:layout_constraintTop_toTopOf="@+id/adultInputLayout">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/icon_remove"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addAdult"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:cardBackgroundColor="@color/primaryColor"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/adultInputLayout"
+                android:layout_marginStart="@dimen/_25sdp"
+                app:layout_constraintStart_toEndOf="@+id/adultInputLayout"
+                app:layout_constraintTop_toTopOf="@+id/adultInputLayout">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/icon_add_outline_24"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/childInputLayout"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/thin_background_outline"
+                android:outlineProvider="none"
+                android:padding="@dimen/_2sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:hint="Child"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/childInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="@{viewModel.passengersCount.child}"
+                    android:editable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/removeChild"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:cardBackgroundColor="@color/primaryColor"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/childInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/childInputLayout"
+                app:layout_constraintTop_toTopOf="@+id/childInputLayout">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/icon_remove"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addChild"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:cardBackgroundColor="@color/primaryColor"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/childInputLayout"
+                android:layout_marginStart="@dimen/_25sdp"
+                app:layout_constraintStart_toEndOf="@+id/childInputLayout"
+                app:layout_constraintTop_toTopOf="@+id/childInputLayout">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/icon_add_outline_24"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/infantInputLayout"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/thin_background_outline"
+                android:outlineProvider="none"
+                android:padding="@dimen/_2sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:hint="Infant"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/infantInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:text="@{viewModel.passengersCount.infant}"
+                    android:editable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/removeInfant"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:cardBackgroundColor="@color/primaryColor"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/infantInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/infantInputLayout"
+                app:layout_constraintTop_toTopOf="@+id/infantInputLayout">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/icon_remove"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addInfant"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:cardBackgroundColor="@color/primaryColor"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/infantInputLayout"
+                android:layout_marginStart="@dimen/_25sdp"
+                app:layout_constraintStart_toEndOf="@+id/infantInputLayout"
+                app:layout_constraintTop_toTopOf="@+id/infantInputLayout">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/icon_add_outline_24"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/passengerClassLinear">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primaryColor"
+                android:fontFamily="@font/prompt_semibold"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="Confirm"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

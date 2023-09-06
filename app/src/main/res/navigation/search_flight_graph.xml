@@ -9,5 +9,26 @@
         android:id="@+id/searchFlightHomeFragment"
         tools:layout="@layout/search_flight_home_layout"
         android:name="com.saqeeb.testing.fragments.SearchFlightHomeFragment"
+        android:label="SearchFlightHomeFragment" >
+        <action
+            android:id="@+id/action_searchFlightHomeFragment_to_passengerCountFragment"
+            app:destination="@id/passengerCountFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"/>
+        <action
+            android:id="@+id/action_searchFlightHomeFragment_to_resultWebView"
+            app:destination="@id/resultWebView" />
+    </fragment>
+    <dialog
+        android:id="@+id/passengerCountFragment"
+        tools:layout="@layout/passenget_count_sheet_layout"
+        android:name="com.saqeeb.testing.fragments.PassengersCountSheet"
+        android:label="SearchFlightHomeFragment" />
+    <fragment
+        android:id="@+id/resultWebView"
+        tools:layout="@layout/web_view_fragement_layout"
+        android:name="com.saqeeb.testing.fragments.WebViewFragment"
         android:label="SearchFlightHomeFragment" />
 </navigation>
